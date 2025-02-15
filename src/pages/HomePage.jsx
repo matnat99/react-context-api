@@ -1,6 +1,17 @@
 import { Link } from "react-router-dom";
+import { useAlertContext } from "../contexts/AlertContext";
+import { useEffect } from "react";
 
 export default function HomePage() {
+  const { setAlertData } = useAlertContext();
+
+  useEffect(() => {
+    setAlertData({
+      type: "info",
+      message: "Chiama ora! Riceverai una ricetta unica in omaggio",
+    });
+  }, [setAlertData]);
+
   return (
     <>
       <section className="hero">
