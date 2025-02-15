@@ -10,18 +10,24 @@ import Feed from "./pages/Feed";
 import Post from "./pages/Post";
 import PageNotFound from "./pages/PageNotFound";
 
+// Components
+import Alert from "./components/Alert";
+
 export default function App() {
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route element={<DefaultLayout />}>
-          <Route index element={<HomePage />} />
-          <Route path="/about-us" element={<AboutUs />} />
-          <Route path="/feed" element={<Feed />} />
-          <Route path="/feed/:id" element={<Post />} />
-        </Route>
-        <Route path="*" element={<PageNotFound />} />
-      </Routes>
-    </BrowserRouter>
+    <>
+      <Alert />
+      <BrowserRouter>
+        <Routes>
+          <Route element={<DefaultLayout />}>
+            <Route index element={<HomePage />} />
+            <Route path="/about-us" element={<AboutUs />} />
+            <Route path="/feed" element={<Feed />} />
+            <Route path="/feed/:id" element={<Post />} />
+          </Route>
+          <Route path="*" element={<PageNotFound />} />
+        </Routes>
+      </BrowserRouter>
+    </>
   );
 }

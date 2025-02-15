@@ -29,6 +29,25 @@ h4 {
   color: #6b4f31;
 }
 
+/* ALERT */
+.bg-blue {
+  background-color: lightblue;
+  color: white;
+  padding: 1.25rem;
+}
+
+.bg-green {
+  background-color: lightgreen;
+  color: white;
+  padding: 1.25rem;
+}
+
+.bg-red {
+  background-color: lightcoral;
+  color: white;
+  padding: 1.25rem;
+}
+
 /* HEADER */
 header {
   padding: 0.9375rem 0;
